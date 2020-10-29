@@ -119,7 +119,7 @@ export async function run(cfg)
 		gh_dt = document.createElement("dt");
 		gh_dt.textContent = "GitHub:";
 		gh_dd = document.createElement("dd");
-		gh_dd.innerHTML = `<a href="https://github.com/${cfg.github.repoURL}">${cfg.github.fullName}</a>`;
+		gh_dd.innerHTML = `<a href="${cfg.github.repoURL}">${cfg.github.fullName}</a>`;
 		dl.insertAdjacentElement("beforeend", gh_dt);
 		dl.insertAdjacentElement("beforeend", gh_dd);
 	}
