@@ -36,25 +36,8 @@ const localizationStrings = {
           "\\bOPTIONAL\\b",
         ].join("|")
       );
-    },
-  },
-  de: {
-    rfc2119Keywords() {
-      return new RegExp(
-        [
-          "\\bMUSS\\b",
-          "\\bERFORDERLICH\\b",
-          "\\b(?:NICHT\\s+)?NÖTIG\\b",
-          "\\bDARF(?:\\s+NICHT)?\\b",
-          "\\bVERBOTEN\\b",
-          "\\bSOLL(?:\\s+NICHT)?\\b",
-          "\\b(?:NICHT\\s+)?EMPFOHLEN\\b",
-          "\\bKANN\\b",
-          "\\bOPTIONAL\\b",
-        ].join("|")
-      );
-    },
-  },
+    }
+  }
 };
 const l10n = getIntlData(localizationStrings);
 

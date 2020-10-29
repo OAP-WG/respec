@@ -7,20 +7,16 @@
     "node": ">=10",
     "npm": ">=5"
   },
-  "bin": {
-    "respec": "./tools/respec2html.js",
-    "respec2html": "./tools/respec2html.js"
-  },
-  "main": "./tools/respecDocWriter.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/w3c/respec.git"
+    "url": "https://github.com/OAP-WG/respec.git"
   },
   "contributors": [
     "Marcos Cáceres <marcos@marcosc.com> (https://marcosc.com/)",
     "Kagami Sascha Rosylight <saschaplas@outlook.com>",
     "Sid Vishnoi <sidvishnoi8@gmail.com>",
-    "Robin Berjon"
+    "Robin Berjon",
+    "Álvaro Torralba <donfrutosgomez@gmail.com> (https://github.com/Alvarito050506)"
   ],
   "devDependencies": {
     "@types/marked": "^1.1.0",
@@ -64,45 +60,11 @@
     "webidl2": "^23.13.0"
   },
   "scripts": {
-    "build:geonovum-debug": "npm run build:geonovum -- --debug",
-    "build:geonovum": "node ./tools/builder.js --profile=geonovum",
-    "build:w3c-debug": "npm run build:w3c -- --debug",
-    "build:w3c-with-jquery": "node ./tools/builder.js --profile=w3c-common",
-    "build:w3c": "node ./tools/builder.js --profile=w3c",
-    "build:dini-debug": "node run build:dini -- --debug",
-    "build:dini": "node ./tools/builder.js --profile=dini",
-    "build": "snyk protect",
-    "builddeps": "rollup -c js/deps/rollup.config.js",
-    "karma": "karma start --single-run",
-    "lint": "tsc -p src/jsconfig.json && eslint .",
-    "prepare": "npm run snyk-protect && npm run builddeps",
-    "release": "node ./tools/release.js",
-    "server": "serve",
-    "snyk-protect": "snyk protect",
-    "snyk": "snyk",
-    "start": "node ./tools/dev-server.js",
-    "test:build": "jasmine --random=false ./tests/test-build.js",
-    "test:headless": "node ./tests/headless.js",
-    "test:karma": "npm run karma"
+    "build": "node ./tools/builder.js --profile=oap-wg"
   },
   "dependencies": {
     "colors": "^1.4.0",
     "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.0",
-    "puppeteer": "^5.3.1"
-  },
-  "files": [
-    "builds/",
-    "tools/respec2html.js",
-    "tools/respecDocWriter.js"
-  ],
-  "prettier": {
-    "trailingComma": "es5",
-    "arrowParens": "avoid"
-  },
-  "snyk": true,
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/respec"
+    "command-line-usage": "^6.1.0"
   }
 }
